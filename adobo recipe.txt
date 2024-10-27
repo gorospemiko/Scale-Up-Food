@@ -1,0 +1,81 @@
+2 lbs chicken (note 1)
+3 pieces dried bay leaves (note 2)
+▢4 tablespoons soy sauce (note 3)
+6 tablespoons white vinegar (note 4)
+5 cloves garlic (note 5)
+1 cups water
+3 tablespoons cooking oil
+1 teaspoon sugar (note 6)
+0.25 teaspoon salt (note 7)
+1 teaspoon whole peppercorn (note 8)
+
+<!--same 
+
+var lookfordecimal_input = ingredients_have.search(/\d+\.\d+/);
+    console.log(lookfordecimal_input);
+    //replace the text removing the number as well as the text before it
+    if (lookfordecimal_input !== -1) { //when the value is found it will go here
+        var text_ingredients_have_index = ingredients_have.replace(/.*?\d+\.\d+\s*/g, '').trim();
+    }
+    else{ //it will always output -1 because the condition is not found that the decimal with dot(.)
+        var text_ingredients_have_index = ingredients_have.replace(/^\D*\d+/, '').trim();
+    }
+    console.log(text_ingredients_have_index);
+    
+    digitRemover(ingredients_have);
+
+
+
+turn into this refactor function
+
+
+    //Practicing Dry principle refactoring
+    function digitRemover(string_inputted) {
+        var lookfor_decimal = string_inputted.search(/\d+\.\d+/);
+        if (lookfor_decimal !== -1){
+            var text_ingredients = string_inputted.replace(/.*?\d+\.\d+\s*/g, '').trim();
+        }
+        else{
+            var text_ingredients = string_inputted.replace(/.*?\d+\.\d+\s*/g, '').trim();
+        }
+        console.log(text_ingredients);
+
+    }
+
+
+
+var lookfordecimal = newvalues.search(/\d+\.\d+/);
+        
+        if (lookfordecimal !== -1) {
+            // If a decimal number is found, remove it
+            var string_new_values_test = newvalues.replace(/.*?\d+\.\d+\s*/g, ''); // Removes everything up to and including the decimal number
+            var trimmed_string_new_value_test = string_new_values_test.trim(); // Output will be the text after the decimal value 
+        } 
+        else {
+            var string_new_values_test = newvalues.replace(/^\D*\d+/, ''); //removes the text before the number and remove also the digit 
+            var trimmed_string_new_value_test = string_new_values_test.trim();
+        }
+        //console.log(trimmed_string_new_value_test);
+        //this values has only string in it.
+       //console.log(trimmed_string_new_value_test);
+        //console.log(string_new_values_test);
+-->
+
+
+
+
+        if(multiplier === null){
+            values.forEach(function(findValue, index){
+                var finalString= digitRemover(findValue);
+                var searchString = finalString.search(ingredients_string_final); 
+                
+                if (searchString !== -1) {  // If a match is found
+                    multiplier = ingredient_value_final / finalValues;
+                    console.log(multiplier, index, searchString); 
+                    break;
+                }
+            });
+            
+        }
+normal multiplier
+

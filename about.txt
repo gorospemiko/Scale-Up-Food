@@ -1,0 +1,8 @@
+Project: Title
+Scale Up: Food
+Objective: To scale up or down the ammount of ingredients that is needed to create a dish. 
+Problem: Needed to calculate the ammount of ingredients needed to dish
+
+Addition of items
+using + button 
+
