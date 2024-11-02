@@ -148,7 +148,7 @@ submitButton.addEventListener("click", function () {
     let finalResult =
       results % 1 === 0
         ? Number(results.toFixed(0))
-        : Number(results.toFixed(10)); //coverted back to number kasi kapag ginamit yung toFixed nagigigng string
+        : Number(results.toFixed(3)); //coverted back to number kasi kapag ginamit yung toFixed nagigigng string
     console.log(finalResult, finalString);
 
     containerforvalues.innerHTML = `<p>${finalResult} ${finalString}</p>`;
